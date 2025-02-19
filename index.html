@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMARTCARE+</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            list-style-type: none;
+            display: flex;
+        }
+
+        .nav-links li {
+            margin-left: 20px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #ffeb3b;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 150px 20px;
+            background-color: #f4f4f4;
+            animation: fadeIn 2s ease-in;
+        }
+
+        .hero img.cover-image {
+            width: 100%;
+            height: auto;
+            max-height: 400px;
+            object-fit: cover;
+        }
+
+        .container {
+            padding: 20px;
+            margin-top: 70px; /* Adjusted to ensure proper spacing below the fixed header */
+        }
+
+        .service-cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .service-card {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            padding: 20px;
+            margin: 10px;
+            width: calc(33% - 40px);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+
+        .service-card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background-color: #4CAF50;
+            color: white;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Custom styles for the message */
+        .custom-message {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            font-size: 36px;
+            color: #333;
+            text-align: center;
+            margin: 50px 0;
+        }
+
+        .small-message {
+            font-size: 16px; /* Smaller font size */
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            color: #333;
+            text-align: center;
+            margin: 50px 0;
+        }
+
+        .explore-button {
+            font-family: 'Impact', Charcoal, sans-serif;
+            font-size: 28px;
+            color: #fff;
+            background-color: #ff6347;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .explore-button:hover {
+            background-color: #e5533d;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">SMARTCARE+</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="signup.html">Signup</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <img src="doctors.jfif" alt="Healthcare Cover Image" class="cover-image">
+        <div class="custom-message">Welcome to SMARTCARE+</div>
+        <div class="custom-message">Efficient and comprehensive healthcare management at your fingertips.</div>
+        <button class="explore-button" onclick="scrollToSection('services')">Explore Services</button>
+    </section>
+
+    <section id="services" class="container">
+        <h2>Our Services</h2>
+        <div class="service-cards">
+            <div class="service-card">
+                <a href="patient-management.html">
+                    <img src="patient-management.webp" alt="Patient Management">
+                    <h3>Patient Management</h3>
+                </a>
+                <p>Streamline patient information and medical history.</p>
+            </div>
+            <div class="service-card">
+                <a href="appointment-scheduling.html">
+                    <img src="appointment-scheduling.jpeg" alt="Appointment Scheduling">
+                    <h3>Appointment Scheduling</h3>
+                </a>
+                <p>Easy and efficient appointment scheduling for patients and doctors.</p>
+            </div>
+            <div class="service-card">
+                <a href="medical-records.html">
+                    <img src="medical-records.jpeg" alt="Medical Records">
+                    <h3>Medical Records</h3>
+                </a>
+                <p>Securely store and access medical records digitally.</p>
+            </div>
+            <div class="service-card">
+                <a href="billing-and-insurance.html">
+                    <img src="insurance.webp" alt="Billing and Insurance">
+                    <h3>Billing and Insurance</h3>
+                </a>
+                <p>Manage billing and insurance claims seamlessly.</p>
+            </div>
+            <div class="service-card">
+                <a href="reporting-analytics.html">
+                    <img src="reporting-analytics.webp" alt="Reporting and Analytics">
+                    <h3>Reporting and Analytics</h3>
+                </a>
+                <p>Generate insightful reports and analytics for better decision-making.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="container">
+        <h2>Contact Us</h2>
+        <p>If you have any questions or need assistance, feel free to contact us at:</        <p>Email: support@smartcare.com</p>
+        <p>Phone: +91-987-654-3210</p>
+        <p>Address: 123 Healthcare Street, Health City, HC 12345</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 SMARTCARE+. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
